@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ThreadedComments xmlns="http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments" xmlns:x="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><threadedComment ref="I2" dT="2024-08-01T11:56:59.06" personId="{1CA4B4E9-9D4A-4685-8173-5B448183FFEB}" id="{428E8EA7-9D65-4C6C-88B9-AE8233B099E0}"><text>Propunere API in dreapta</text></threadedComment><threadedComment ref="I3" dT="2024-08-01T11:57:12.13" personId="{1CA4B4E9-9D4A-4685-8173-5B448183FFEB}" id="{5D7AE82A-4708-4EAC-BEE7-73FF41B3E71F}"><text>Propunere API in dreapta</text></threadedComment><threadedComment ref="I20" dT="2026-07-23T06:01:24.61" personId="{C6CF6BC5-8E94-464E-BA50-4BE5ECC5B915}" id="{5CF2C2D9-FB8C-4144-A26B-3721D1C18B21}"><text>Technical Details for the Self-Study part:
+1. [2-1-django-project-structure-and-configuration.md] 
+- Create a new Django project called AirAssistBackend
+2. [2-3-django-models-and-database-integration.md] 
+- Create a Database in PostgresSQL called AirAssist
+- Create Table Users[userId, roleId, firstName, lastName, email, password]
+- Create Table Roles[roleId, role]. Role is a string withe the following options: System_Admin, Colleague, Passenger
+-Configure Project to use PostgresSQL
+- Create a model for User
+- Create a model for Role
+3. [2-4-django-orm.md]
+- Add a method to create a user
+- Add a method to get the role of a specific user
+4. [2-5-django-rest-framework.md]
+- Create a POST endpoint that creates a new user: POST /user  valid body    →  201  {userId, roleId, firstName, lastName, email}
+- Create a GET endpoint that returns the role for a specific user: GET /user/1 valid body → 200 {roleId, role} 
+5. [2-7-django-authentication-and-authorization]
+- setup JWT authentication for the project
+- Create A login page with two inputs (email, password) that allows a user to login. The page will display a text 'Success' if the loggin is successful, or fobidden otherwise.
+- Create a permission is_system_admin that allows admin users to create  a new users and include this permission for the endpoint: POST /user
+- A regular user can only use the the endpoint: GET /user/&lt;id&gt;
+6. [3-0-special-topics.md]
+- Change. the creation endpoint so that the users receives upon creation an email with is details: userId, roleId, firstName, lastName, email and password</text></threadedComment><threadedComment ref="I20" dT="2026-07-23T06:30:34.72" personId="{C6CF6BC5-8E94-464E-BA50-4BE5ECC5B915}" id="{45EA200E-347E-4CAC-93B8-6FEA1733B9B8}" parentId="{5CF2C2D9-FB8C-4144-A26B-3721D1C18B21}"><text>This Story will be implemented in Phase 1 - Focus Self-Learning (minus the change password functionality - that will come later)
+
+The objective of the story is to have a functioning project skeleton when you start work on the project (Phase 2)</text></threadedComment><threadedComment ref="I21" dT="2024-08-01T13:08:22.41" personId="{1CA4B4E9-9D4A-4685-8173-5B448183FFEB}" id="{8FF35CC6-606A-4AE8-876B-FFE3AFBF33B3}"><text>Trebuie intrebat ce se intampla cu "case"urile asignate unui user</text></threadedComment></ThreadedComments>

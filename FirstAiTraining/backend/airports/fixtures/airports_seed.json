@@ -1,0 +1,8 @@
+[
+  {"iata": "OTP", "icao": "LROP", "name": "Henri Coandă International Airport", "city": "Bucharest", "country": "Romania", "latitude": "44.5711", "longitude": "26.0850"},
+  {"iata": "CDG", "icao": "LFPG", "name": "Charles de Gaulle Airport", "city": "Paris", "country": "France", "latitude": "49.0097", "longitude": "2.5479"},
+  {"iata": "FRA", "icao": "EDDF", "name": "Frankfurt Airport", "city": "Frankfurt", "country": "Germany", "latitude": "50.0379", "longitude": "8.5622"},
+  {"iata": "LHR", "icao": "EGLL", "name": "London Heathrow Airport", "city": "London", "country": "United Kingdom", "latitude": "51.4700", "longitude": "-0.4543"},
+  {"iata": "AMS", "icao": "EHAM", "name": "Amsterdam Schiphol Airport", "city": "Amsterdam", "country": "Netherlands", "latitude": "52.3105", "longitude": "4.7683"},
+  {"iata": "MAD", "icao": "LEMD", "name": "Adolfo Suárez Madrid–Barajas Airport", "city": "Madrid", "country": "Spain", "latitude": "40.4936", "longitude": "-3.5668"}
+]
