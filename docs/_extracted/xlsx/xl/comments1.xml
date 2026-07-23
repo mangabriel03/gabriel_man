@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<comments xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="xr" xmlns:xr="http://schemas.microsoft.com/office/spreadsheetml/2014/revision"><authors><author>tc={C529E618-583C-4C5C-87D1-99E10D66B438}</author><author>tc={75902FA9-ED73-497F-BFFD-91C91F844688}</author><author>tc={8EAD3ADA-7DE1-4CC6-921D-84B2333397EA}</author><author>tc={56293725-66B8-4002-A7CC-D6B4F33EF543}</author></authors><commentList><comment ref="I2" authorId="0" shapeId="0" xr:uid="{C529E618-583C-4C5C-87D1-99E10D66B438}"><text><t>[Threaded comment]
+
+Your version of Excel allows you to read this threaded comment; however, any edits to it will get removed if the file is opened in a newer version of Excel. Learn more: https://go.microsoft.com/fwlink/?linkid=870924
+
+Comment:
+    Propunere API in dreapta</t></text></comment><comment ref="I3" authorId="1" shapeId="0" xr:uid="{75902FA9-ED73-497F-BFFD-91C91F844688}"><text><t>[Threaded comment]
+
+Your version of Excel allows you to read this threaded comment; however, any edits to it will get removed if the file is opened in a newer version of Excel. Learn more: https://go.microsoft.com/fwlink/?linkid=870924
+
+Comment:
+    Propunere API in dreapta</t></text></comment><comment ref="I20" authorId="2" shapeId="0" xr:uid="{8EAD3ADA-7DE1-4CC6-921D-84B2333397EA}"><text><t>[Threaded comment]
+
+Your version of Excel allows you to read this threaded comment; however, any edits to it will get removed if the file is opened in a newer version of Excel. Learn more: https://go.microsoft.com/fwlink/?linkid=870924
+
+Comment:
+    Technical Details for the Self-Study part:
+1. [2-1-django-project-structure-and-configuration.md] 
+- Create a new Django project called AirAssistBackend
+2. [2-3-django-models-and-database-integration.md] 
+- Create a Database in PostgresSQL called AirAssist
+- Create Table Users[userId, roleId, firstName, lastName, email, password]
+- Create Table Roles[roleId, role]. Role is a string withe the following options: System_Admin, Colleague, Passenger
+-Configure Project to use PostgresSQL
+- Create a model for User
+- Create a model for Role
+3. [2-4-django-orm.md]
+- Add a method to create a user
+- Add a method to get the role of a specific user
+4. [2-5-django-rest-framework.md]
+- Create a POST endpoint that creates a new user: POST /user  valid body    →  201  {userId, roleId, firstName, lastName, email}
+- Create a GET endpoint that returns the role for a specific user: GET /user/1 valid body → 200 {roleId, role} 
+5. [2-7-django-authentication-and-authorization]
+- setup JWT authentication for the project
+- Create A login page with two inputs (email, password) that allows a user to login. The page will display a text 'Success' if the loggin is successful, or fobidden otherwise.
+- Create a permission is_system_admin that allows admin users to create  a new users and include this permission for the endpoint: POST /user
+- A regular user can only use the the endpoint: GET /user/&lt;id&gt;
+6. [3-0-special-topics.md]
+- Change. the creation endpoint so that the users receives upon creation an email with is details: userId, roleId, firstName, lastName, email and password
+Reply:
+    This Story will be implemented in Phase 1 - Focus Self-Learning (minus the change password functionality - that will come later)
+
+The objective of the story is to have a functioning project skeleton when you start work on the project (Phase 2)</t></text></comment><comment ref="I21" authorId="3" shapeId="0" xr:uid="{56293725-66B8-4002-A7CC-D6B4F33EF543}"><text><t>[Threaded comment]
+
+Your version of Excel allows you to read this threaded comment; however, any edits to it will get removed if the file is opened in a newer version of Excel. Learn more: https://go.microsoft.com/fwlink/?linkid=870924
+
+Comment:
+    Trebuie intrebat ce se intampla cu "case"urile asignate unui user</t></text></comment></commentList></comments>

@@ -1,0 +1,27 @@
+.summary {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background: #f6f8fa;
+}
+
+.pending {
+  color: #57606a;
+  font-style: italic;
+}
+
+.amount {
+  font-size: 1.5rem;
+  margin: 0.25rem 0;
+}
+
+.detail {
+  color: #57606a;
+  margin: 0;
+}
+
+.warning {
+  color: #9a3412;
+  margin: 0;
+}

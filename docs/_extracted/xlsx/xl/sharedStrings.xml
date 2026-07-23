@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" count="2427" uniqueCount="710"><si><t>Task ID</t></si><si><t>Epic</t></si><si><t>Story ID</t></si><si><t>Story Title</t></si><si><t>Category</t></si><si><t>Task</t></si><si><t>Student</t></si><si><t>Sprint</t></si><si><t>Priority</t></si><si><t>Status</t></si><si><t>Details</t></si><si><t>SCRUM-001</t></si><si><t>Case Register</t></si><si><t>CASE_01</t></si><si><t>Case Entry</t></si><si><t>Backend</t></si><si><t>Case creation API</t></si><si><t>Focus Learning</t></si><si><t>To Do</t></si><si><t>See Backlog row 2</t></si><si><t>SCRUM-002</t></si><si><t>Airport code lookup integration</t></si><si><t>SCRUM-003</t></si><si><t>Connecting-flight logic</t></si><si><t>SCRUM-004</t></si><si><t>Problem-flight validation</t></si><si><t>SCRUM-005</t></si><si><t>File upload validation</t></si><si><t>SCRUM-006</t></si><si><t>GDPR consent enforcement</t></si><si><t>SCRUM-007</t></si><si><t>Case status workflow</t></si><si><t>SCRUM-008</t></si><si><t>Frontend</t></si><si><t>Case entry form</t></si><si><t>SCRUM-009</t></si><si><t>Passenger details section</t></si><si><t>SCRUM-010</t></si><si><t>Flight details section</t></si><si><t>SCRUM-011</t></si><si><t>Connecting flights UI</t></si><si><t>SCRUM-012</t></si><si><t>Document upload UI</t></si><si><t>SCRUM-013</t></si><si><t>GDPR checkbox UI</t></si><si><t>SCRUM-014</t></si><si><t>Required-field validation</t></si><si><t>SCRUM-015</t></si><si><t>Database</t></si><si><t>Case table/model</t></si><si><t>SCRUM-016</t></si><si><t>Passenger data fields</t></si><si><t>SCRUM-017</t></si><si><t>Flight/connection records</t></si><si><t>SCRUM-018</t></si><si><t>Uploaded document metadata</t></si><si><t>SCRUM-019</t></si><si><t>GDPR consent fields</t></si><si><t>SCRUM-020</t></si><si><t>Case status field</t></si><si><t>SCRUM-021</t></si><si><t>CASE_02</t></si><si><t>Calculate Compensation Level</t></si><si><t>Integrate airport distance API</t></si><si><t>See Backlog row 3</t></si><si><t>SCRUM-022</t></si><si><t>Calculate orthodromic distance</t></si><si><t>SCRUM-023</t></si><si><t>Apply compensation thresholds</t></si><si><t>SCRUM-024</t></si><si><t>Persist calculated compensation result</t></si><si><t>SCRUM-025</t></si><si><t>Display calculated distance</t></si><si><t>SCRUM-026</t></si><si><t>Display compensation amount</t></si><si><t>SCRUM-027</t></si><si><t>Trigger recalculation when airports change</t></si><si><t>SCRUM-028</t></si><si><t>Store distance result</t></si><si><t>SCRUM-029</t></si><si><t>Store compensation amount</t></si><si><t>SCRUM-030</t></si><si><t>Link calculation data to case record</t></si><si><t>SCRUM-031</t></si><si><t>CASE_03</t></si><si><t>Collect Disruption Motives</t></si><si><t>Process disruption type selection</t></si><si><t>See Backlog row 4</t></si><si><t>SCRUM-032</t></si><si><t>Validate disruption presence before submission</t></si><si><t>SCRUM-033</t></si><si><t>Store disruption answers without strict answer validation</t></si><si><t>SCRUM-034</t></si><si><t>Build disruption type dropdown</t></si><si><t>SCRUM-035</t></si><si><t>Show conditional fields by disruption type</t></si><si><t>SCRUM-036</t></si><si><t>Add incident description text box</t></si><si><t>SCRUM-037</t></si><si><t>Enforce disruption section completion</t></si><si><t>SCRUM-038</t></si><si><t>Store disruption type</t></si><si><t>SCRUM-039</t></si><si><t>Store cancellation, delay, and denied boarding answers</t></si><si><t>SCRUM-040</t></si><si><t>Store airline motive details</t></si><si><t>SCRUM-041</t></si><si><t>Store incident description</t></si><si><t>SCRUM-042</t></si><si><t>Case Eligibility Verification</t></si><si><t>ELIGIBILITY_01</t></si><si><t>Eligibility Determination</t></si><si><t>Implement eligibility rules for cancellation</t></si><si><t>See Backlog row 5</t></si><si><t>SCRUM-043</t></si><si><t>Implement eligibility rules for delay</t></si><si><t>SCRUM-044</t></si><si><t>Implement eligibility rules for denied boarding</t></si><si><t>SCRUM-045</t></si><si><t>Set case status to VALID when eligible</t></si><si><t>SCRUM-046</t></si><si><t>Show eligibility result feedback</t></si><si><t>SCRUM-047</t></si><si><t>Prevent progression for ineligible cases</t></si><si><t>SCRUM-048</t></si><si><t>Store eligibility outcome</t></si><si><t>SCRUM-049</t></si><si><t>Store eligibility decision inputs</t></si><si><t>SCRUM-050</t></si><si><t>Update case status field</t></si><si><t>SCRUM-051</t></si><si><t>ELIGIBILITY_02</t></si><si><t>Confirmation of Eligibility</t></si><si><t>Enforce only eligible cases can be stored</t></si><si><t>See Backlog row 6</t></si><si><t>SCRUM-052</t></si><si><t>Generate unique case ID</t></si><si><t>SCRUM-053</t></si><si><t>Trigger confirmation email</t></si><si><t>SCRUM-054</t></si><si><t>Show eligible confirmation message</t></si><si><t>SCRUM-055</t></si><si><t>Enable Submit button for eligible cases</t></si><si><t>SCRUM-056</t></si><si><t>Show ineligible confirmation message</t></si><si><t>SCRUM-057</t></si><si><t>Keep Submit button disabled for ineligible cases</t></si><si><t>SCRUM-058</t></si><si><t>Store eligible case record</t></si><si><t>SCRUM-059</t></si><si><t>Persist generated case ID</t></si><si><t>SCRUM-060</t></si><si><t>CASE_05</t></si><si><t>Create User Account</t></si><si><t>Create passenger user account after case data capture</t></si><si><t>See Backlog row 7</t></si><si><t>SCRUM-061</t></si><si><t>Generate initial password</t></si><si><t>SCRUM-062</t></si><si><t>Send password email</t></si><si><t>SCRUM-063</t></si><si><t>Enforce password change on first login</t></si><si><t>SCRUM-064</t></si><si><t>Support login with generated credentials</t></si><si><t>SCRUM-065</t></si><si><t>Prompt password change on first login</t></si><si><t>SCRUM-066</t></si><si><t>Store passenger user account</t></si><si><t>SCRUM-067</t></si><si><t>Store password reset/change-required flag</t></si><si><t>SCRUM-068</t></si><si><t>Link user account to passenger/case data</t></si><si><t>SCRUM-069</t></si><si><t>CASE_04</t></si><si><t>Save Case</t></si><si><t>Create case with unique ID and date</t></si><si><t>See Backlog row 8</t></si><si><t>SCRUM-070</t></si><si><t>Add empty colleague assignment field</t></si><si><t>SCRUM-071</t></si><si><t>Save passenger, flight, and disruption details transactionally</t></si><si><t>SCRUM-072</t></si><si><t>Handle database save failures without partial data</t></si><si><t>SCRUM-073</t></si><si><t>Submit completed case data</t></si><si><t>SCRUM-074</t></si><si><t>Show save success or error message</t></si><si><t>SCRUM-075</t></si><si><t>Create cases table fields</t></si><si><t>SCRUM-076</t></si><si><t>Create flights table fields</t></si><si><t>SCRUM-077</t></si><si><t>Create passengers table fields</t></si><si><t>SCRUM-078</t></si><si><t>Create disruptions table fields</t></si><si><t>SCRUM-079</t></si><si><t>Add primary and foreign key constraints</t></si><si><t>SCRUM-080</t></si><si><t>Case Completion and Documentation</t></si><si><t>CASE_COMPLETED_01</t></si><si><t>Generate PDF with Case Details</t></si><si><t>Generate PDF contract after form submission</t></si><si><t>See Backlog row 9</t></si><si><t>SCRUM-081</t></si><si><t>Include case ID, date, passenger details, and reservation number</t></si><si><t>SCRUM-082</t></si><si><t>Store generated PDF</t></si><si><t>SCRUM-083</t></si><si><t>Provide PDF download endpoint</t></si><si><t>SCRUM-084</t></si><si><t>Trigger PDF generation on submission</t></si><si><t>SCRUM-085</t></si><si><t>Show PDF download link in confirmation</t></si><si><t>SCRUM-086</t></si><si><t>Make PDF accessible from entry page</t></si><si><t>SCRUM-087</t></si><si><t>Store PDF document metadata</t></si><si><t>SCRUM-088</t></si><si><t>Link PDF file to case record</t></si><si><t>SCRUM-089</t></si><si><t>CASE_COMPLETED_02</t></si><si><t>Send Email  Notification</t></si><si><t>Send registration confirmation email</t></si><si><t>See Backlog row 10</t></si><si><t>SCRUM-090</t></si><si><t>Include case ID in email</t></si><si><t>SCRUM-091</t></si><si><t>Attach generated PDF when available</t></si><si><t>SCRUM-092</t></si><si><t>Show email notification confirmation if needed</t></si><si><t>SCRUM-093</t></si><si><t>Store email notification status</t></si><si><t>SCRUM-094</t></si><si><t>Store sent timestamp and delivery metadata</t></si><si><t>SCRUM-095</t></si><si><t>Employee Operations</t></si><si><t>EMPLOYEE_03</t></si><si><t>Case List</t></si><si><t>Provide case list API for colleagues</t></si><si><t>See Backlog row 11</t></si><si><t>SCRUM-096</t></si><si><t>Apply colleague authorization</t></si><si><t>SCRUM-097</t></si><si><t>Include assigned colleague and status data</t></si><si><t>SCRUM-098</t></si><si><t>Build colleague case list view</t></si><si><t>SCRUM-099</t></si><si><t>Display case ID, dates, flight, passenger, status, and assignee</t></si><si><t>SCRUM-100</t></si><si><t>Add navigation to case details</t></si><si><t>SCRUM-101</t></si><si><t>Query cases with passenger, flight, status, and colleague assignment joins</t></si><si><t>SCRUM-102</t></si><si><t>EMPLOYEE_01</t></si><si><t>Create Cases</t></si><si><t>Reuse case creation flow for colleagues</t></si><si><t>See Backlog row 12</t></si><si><t>SCRUM-103</t></si><si><t>Validate passenger, flight, and disruption data</t></si><si><t>SCRUM-104</t></si><si><t>Return creation confirmation</t></si><si><t>SCRUM-105</t></si><si><t>Enable colleague case entry form</t></si><si><t>SCRUM-106</t></si><si><t>Show successful creation toast/snackbar</t></si><si><t>SCRUM-107</t></si><si><t>Store colleague-created case records</t></si><si><t>SCRUM-108</t></si><si><t>Link created case to creator if needed</t></si><si><t>SCRUM-109</t></si><si><t>EMPLOYEE_05</t></si><si><t>Case Details</t></si><si><t>Provide detailed case API for colleagues</t></si><si><t>See Backlog row 13</t></si><si><t>SCRUM-110</t></si><si><t>Load flight, passenger, documents, and comments</t></si><si><t>SCRUM-111</t></si><si><t>Enforce colleague access rules</t></si><si><t>SCRUM-112</t></si><si><t>Make case ID link open detailed case view</t></si><si><t>SCRUM-113</t></si><si><t>Display full flight, passenger, document, and comment sections</t></si><si><t>SCRUM-114</t></si><si><t>Query related case detail tables</t></si><si><t>SCRUM-115</t></si><si><t>Support document and comment history retrieval</t></si><si><t>SCRUM-116</t></si><si><t>EMPLOYEE_02</t></si><si><t>Comment on Cases</t></si><si><t>Add colleague comment API</t></si><si><t>See Backlog row 14</t></si><si><t>SCRUM-117</t></si><si><t>Validate comment length and author</t></si><si><t>SCRUM-118</t></si><si><t>Timestamp saved comments</t></si><si><t>SCRUM-119</t></si><si><t>Add comment text area and button</t></si><si><t>SCRUM-120</t></si><si><t>Show comment list with author and timestamp</t></si><si><t>SCRUM-121</t></si><si><t>Store case comments</t></si><si><t>SCRUM-122</t></si><si><t>Link comments to case and user</t></si><si><t>SCRUM-123</t></si><si><t>EMPLOYEE_04</t></si><si><t>Attach and Download Documents for Cases and Flights</t></si><si><t>Implement colleague document upload and download</t></si><si><t>See Backlog row 15</t></si><si><t>SCRUM-124</t></si><si><t>Validate file type and 5 MB limit</t></si><si><t>SCRUM-125</t></si><si><t>Return upload/download confirmations</t></si><si><t>SCRUM-126</t></si><si><t>Add upload and download controls</t></si><si><t>SCRUM-127</t></si><si><t>Show document list and toast/snackbar confirmation</t></si><si><t>SCRUM-128</t></si><si><t>Store document metadata</t></si><si><t>SCRUM-129</t></si><si><t>Link documents to cases or flights</t></si><si><t>SCRUM-130</t></si><si><t>EMPLOYEE_06</t></si><si><t>Assign Cases to Colleagues</t></si><si><t>Provide colleague list for assignment</t></si><si><t>See Backlog row 16</t></si><si><t>SCRUM-131</t></si><si><t>Update case assignee</t></si><si><t>SCRUM-132</t></si><si><t>Validate assignment permissions</t></si><si><t>SCRUM-133</t></si><si><t>Add colleague dropdown and Assign button</t></si><si><t>SCRUM-134</t></si><si><t>Refresh assignee field after assignment</t></si><si><t>SCRUM-135</t></si><si><t>Store colleague assignment on case</t></si><si><t>SCRUM-136</t></si><si><t>Maintain user-to-case relationship</t></si><si><t>SCRUM-137</t></si><si><t>EMPLOYEE_07</t></si><si><t>Check Eligibility of Flight and Claim</t></si><si><t>Support manual eligibility status update</t></si><si><t>See Backlog row 17</t></si><si><t>SCRUM-138</t></si><si><t>Send rejection email for non-eligible cases</t></si><si><t>SCRUM-139</t></si><si><t>Flag rejected case status</t></si><si><t>SCRUM-140</t></si><si><t>Add eligibility checkbox/control</t></si><si><t>SCRUM-141</t></si><si><t>Display current case eligibility state</t></si><si><t>SCRUM-142</t></si><si><t>Show update confirmation</t></si><si><t>SCRUM-143</t></si><si><t>Store manual eligibility decision</t></si><si><t>SCRUM-144</t></si><si><t>Update case status and audit fields</t></si><si><t>SCRUM-145</t></si><si><t>EMPLOYEE_08</t></si><si><t>Show PDF History</t></si><si><t>Provide generated PDF history API</t></si><si><t>See Backlog row 18</t></si><si><t>SCRUM-146</t></si><si><t>Enforce colleague access to PDF history</t></si><si><t>SCRUM-147</t></si><si><t>Build PDF history view</t></si><si><t>SCRUM-148</t></si><si><t>Display ID, document name, passenger name, and case ID</t></si><si><t>SCRUM-149</t></si><si><t>Query generated PDF metadata</t></si><si><t>SCRUM-150</t></si><si><t>Link PDFs to cases and passengers</t></si><si><t>SCRUM-151</t></si><si><t>System Administration</t></si><si><t>ROLE_00</t></si><si><t>User List</t></si><si><t>Provide admin user list API</t></si><si><t>See Backlog row 19</t></si><si><t>SCRUM-152</t></si><si><t>Include assigned case counts</t></si><si><t>SCRUM-153</t></si><si><t>Enforce admin authorization</t></si><si><t>SCRUM-154</t></si><si><t>Build user list view</t></si><si><t>SCRUM-155</t></si><si><t>Display name, email, role, assigned cases, and actions</t></si><si><t>SCRUM-156</t></si><si><t>Query users and assigned case counts</t></si><si><t>SCRUM-157</t></si><si><t>ROLE_01</t></si><si><t>Create User Accounts</t></si><si><t>Implement colleague account creation</t></si><si><t>See Backlog row 20</t></si><si><t>SCRUM-158</t></si><si><t>Validate new user data</t></si><si><t>SCRUM-159</t></si><si><t>SCRUM-160</t></si><si><t>Build new user form</t></si><si><t>SCRUM-161</t></si><si><t>Show successful creation confirmation</t></si><si><t>SCRUM-162</t></si><si><t>Store colleague user account</t></si><si><t>SCRUM-163</t></si><si><t>Store assigned role and credentials metadata</t></si><si><t>SCRUM-164</t></si><si><t>ROLE_02</t></si><si><t>Delete User Accounts</t></si><si><t>Implement user deletion endpoint</t></si><si><t>See Backlog row 21</t></si><si><t>SCRUM-165</t></si><si><t>Validate deletion permissions and constraints</t></si><si><t>SCRUM-166</t></si><si><t>Return deletion confirmation</t></si><si><t>SCRUM-167</t></si><si><t>Add delete action to user list</t></si><si><t>SCRUM-168</t></si><si><t>Show deletion confirmation message</t></si><si><t>SCRUM-169</t></si><si><t>Delete or deactivate user accounts</t></si><si><t>SCRUM-170</t></si><si><t>Preserve referential integrity for linked cases</t></si><si><t>SCRUM-171</t></si><si><t>ROLE_03</t></si><si><t>Delete Cases</t></si><si><t>Implement case deletion endpoint</t></si><si><t>See Backlog row 22</t></si><si><t>SCRUM-172</t></si><si><t>Validate admin permissions</t></si><si><t>SCRUM-173</t></si><si><t>SCRUM-174</t></si><si><t>Add delete button to case list</t></si><si><t>SCRUM-175</t></si><si><t>Show successful deletion confirmation</t></si><si><t>SCRUM-176</t></si><si><t>Delete or archive case records</t></si><si><t>SCRUM-177</t></si><si><t>Handle dependent flight, passenger, document, and comment data</t></si><si><t>SCRUM-178</t></si><si><t>ROLE_04</t></si><si><t>Admin Landing Page</t></si><si><t>Provide admin navigation metadata if needed</t></si><si><t>See Backlog row 23</t></si><si><t>SCRUM-179</t></si><si><t>Enforce admin-only access</t></si><si><t>SCRUM-180</t></si><si><t>Build admin landing page</t></si><si><t>SCRUM-181</t></si><si><t>Add links to New User, User, Case, and System views</t></si><si><t>SCRUM-182</t></si><si><t>ROLE_05</t></si><si><t>Change System Options</t></si><si><t>Implement system options management</t></si><si><t>See Backlog row 24</t></si><si><t>SCRUM-183</t></si><si><t>Support email preset and PDF preset configuration</t></si><si><t>SCRUM-184</t></si><si><t>Validate configuration changes</t></si><si><t>SCRUM-185</t></si><si><t>Build system options view</t></si><si><t>SCRUM-186</t></si><si><t>Add editable email and PDF preset fields</t></si><si><t>SCRUM-187</t></si><si><t>Show save confirmation</t></si><si><t>SCRUM-188</t></si><si><t>Store system option records</t></si><si><t>SCRUM-189</t></si><si><t>Persist email and PDF preset settings</t></si><si><t>SCRUM-190</t></si><si><t>Passenger Operations</t></si><si><t>PASSENEGER_02</t></si><si><t>View Past Cases</t></si><si><t>Provide passenger case list API</t></si><si><t>See Backlog row 25</t></si><si><t>SCRUM-191</t></si><si><t>Restrict results to logged-in passenger</t></si><si><t>SCRUM-192</t></si><si><t>Build passenger past cases view</t></si><si><t>SCRUM-193</t></si><si><t>Display ID, flight number, passenger name, status, and assignee</t></si><si><t>SCRUM-194</t></si><si><t>Query cases linked to passenger account</t></si><si><t>SCRUM-195</t></si><si><t>PASSENEGER_01</t></si><si><t>View Past Case Details</t></si><si><t>Provide passenger case details API</t></si><si><t>See Backlog row 26</t></si><si><t>SCRUM-196</t></si><si><t>Restrict access to own cases</t></si><si><t>SCRUM-197</t></si><si><t>Load documents and comments</t></si><si><t>SCRUM-198</t></si><si><t>Make case ID open detailed case view</t></si><si><t>SCRUM-199</t></si><si><t>Display flight, passenger, documents, and comments</t></si><si><t>SCRUM-200</t></si><si><t>Query case details, documents, and comments for passenger case</t></si><si><t>SCRUM-201</t></si><si><t>PASSENEGER_03</t></si><si><t>Attach Documents to Case</t></si><si><t>Implement passenger document upload</t></si><si><t>See Backlog row 27</t></si><si><t>SCRUM-202</t></si><si><t>Validate PDF/JPEG/JPG type and 5 MB limit</t></si><si><t>SCRUM-203</t></si><si><t>Return upload confirmation</t></si><si><t>SCRUM-204</t></si><si><t>Add drag-and-drop and browse upload field</t></si><si><t>SCRUM-205</t></si><si><t>Show uploaded document in attached documents list</t></si><si><t>SCRUM-206</t></si><si><t>Display toast/snackbar confirmation</t></si><si><t>SCRUM-207</t></si><si><t>Store uploaded document metadata</t></si><si><t>SCRUM-208</t></si><si><t>Link document to case and passenger</t></si><si><t>SCRUM-209</t></si><si><t>PASSENEGER_04</t></si><si><t>Download Documents from Case</t></si><si><t>Implement passenger document download</t></si><si><t>See Backlog row 28</t></si><si><t>SCRUM-210</t></si><si><t>Enforce document access permissions</t></si><si><t>SCRUM-211</t></si><si><t>Add document download action</t></si><si><t>SCRUM-212</t></si><si><t>Provide user-friendly download behavior</t></si><si><t>SCRUM-213</t></si><si><t>Retrieve document metadata and file reference</t></si><si><t>SCRUM-214</t></si><si><t>PASSENEGER_05</t></si><si><t>Comment on Case</t></si><si><t>Add passenger comment API</t></si><si><t>See Backlog row 29</t></si><si><t>SCRUM-215</t></si><si><t>Validate 1000-character limit</t></si><si><t>SCRUM-216</t></si><si><t>SCRUM-217</t></si><si><t>Add comment text area and Add Comment button</t></si><si><t>SCRUM-218</t></si><si><t>SCRUM-219</t></si><si><t>Store passenger comments</t></si><si><t>SCRUM-220</t></si><si><t>SCRUM-221</t></si><si><t>OPTIONAL_1</t></si><si><t>Pre-Loading Airport Data</t></si><si><t>Implement scheduled airport data preload job</t></si><si><t>See Backlog row 30</t></si><si><t>SCRUM-222</t></si><si><t>Call external airport REST endpoint</t></si><si><t>SCRUM-223</t></si><si><t>Handle refresh errors and retries</t></si><si><t>SCRUM-224</t></si><si><t>Create or update airports table</t></si><si><t>SCRUM-225</t></si><si><t>Store airport reference data from API</t></si><si><t>Prio</t></si><si><t>ID</t></si><si><t>Role</t></si><si><t>Title</t></si><si><t>Description</t></si><si><t>View</t></si><si><t>Data</t></si><si><t>Acceptance Criteria</t></si><si><t>API Call</t></si><si><t>Task Categorisation</t></si><si><t>Passenger</t></si><si><t>As a passenger, I want to fill out a form that contains personal and flight infos in order to create a new compensation case.</t></si><si><t>Case Entry Form</t></si><si><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><scheme val="minor"/></rPr><t xml:space="preserve">Following data must be filled
+ 
+</t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><scheme val="minor"/></rPr><t>Flight itinerary</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><scheme val="minor"/></rPr><t xml:space="preserve">:
+- flight date (date), 
+- flight nr.(String), 
+- airline (String), 
+- reservation number (String), 
+- departing airport (API Input), 
+- destination airport (API Input), 
+- connecting flights (API Input), 
+- planned departure time (DateTime), 
+- planned arrival time (DateTime).  
+
+</t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><scheme val="minor"/></rPr><t>Passenger details</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><scheme val="minor"/></rPr><t xml:space="preserve">: 
+- firstname (String), 
+- lastname (String), 
+- date of birth (Date&lt;Present Date&gt;), 
+- e-mail (regex), 
+- phone (regex),
+- address(String), 
+- postal code(String)  
+
+</t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><scheme val="minor"/></rPr><t xml:space="preserve">Documents: 
+</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><scheme val="minor"/></rPr><t>- Boarding Pass and ID/Passport (</t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><scheme val="minor"/></rPr><t>Files</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><scheme val="minor"/></rPr><t xml:space="preserve">: pdf, png, jpg)
+
+</t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><scheme val="minor"/></rPr><t>GDPR details</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><scheme val="minor"/></rPr><t xml:space="preserve">: 
+- 2 fields for "Agree" or "Disagree" with the GDPR policy. 
+</t></r></si><si><t xml:space="preserve">Each case entry form contains 6 distinct parts: 
+1. flight itinerary
+2. disruption details
+3. disruption motives
+4. email &amp; compliance request
+5. flight details
+6. passenger details 
+
+This story does not implement parts 2 and 3, which are implemented in CASE_03
+
+Users can access the case entry form.
+All required fields are validated before submission.
+Airport Codes are loaded automatically.
+The user may add up to 4 connecting flights.
+The user needs to mark the problem connecting flight (mandatory).
+Checkbox for GDPR policy. Users must consent in order to be able to submit.
+Each flight (including connecting flights) will have flight details: flight number, flight date and airline.
+An upload field is displayed where users must upload a Boarding Pass and ID/Passport. The file size must be a maximum of 5 MB and in PDF or JPEG/JPG format only.
+All fields are mandatory.
+A "Status" field is added to the case. It is intially NEW. Four  Status are possible: NEW - upon creation, VALID  - eligible, ASSIGNED - when a colleague is assigned to a case, INVALID - when a colleague sets it after manual verification.
+
+</t></si><si><t>https://airportgap.com/docs#api_ref_get_airports</t></si><si><t>Backend:
+- Case creation API
+- Airport code lookup integration
+- Connecting-flight logic
+- Problem-flight validation
+- File upload validation
+- GDPR consent enforcement
+- Case status workflow
+
+Frontend:
+- Case entry form
+- Passenger details section
+- Flight details section
+- Connecting flights UI
+- Document upload UI
+- GDPR checkbox UI
+- Required-field validation
+
+Database:
+- Case table/model
+- Passenger data fields
+- Flight/connection records
+- Uploaded document metadata
+- GDPR consent fields
+- Case status field</t></si><si><t>As a passenger, I want the system to calculate my compensation level based on the flight distance of  so that I know how much compensation I am eligible to.</t></si><si><t>The system calculates the orthodromic distance between the starting and final destination (connecting flights are not considered).
+The system determines the compensation level based on the calculated distance:
+&lt;1500km – 250€
+1500-3500km – 400€
+3500km – 600€
+
+The calculated compensation level is displayed to the user and added as information to the case.</t></si><si><t>https://airportgap.com/docs#api_ref_post_airports_distance</t></si><si><t>Backend:
+- Integrate airport distance API
+- Calculate orthodromic distance
+- Apply compensation thresholds
+- Persist calculated compensation result
+
+Frontend:
+- Display calculated distance
+- Display compensation amount
+- Trigger recalculation when airports change
+
+Database:
+- Store distance result
+- Store compensation amount
+- Link calculation data to case record</t></si><si><t>As a passenger, I want to provide information about the motive behind the disruption and describe the incident so that my case can be accurately assesed.</t></si><si><t>Disruption Information</t></si><si><r><t xml:space="preserve">The form presents a dropdown menu for the type of disruption (cancellation, delay, denied boarding).
+Based on the selection, other relevant  fields are displayed dynamically.
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">
+If "Cancellation" is selected:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Show fields for "How many days before cancellation has the airline informed?" with options: &gt;14 days, &lt;14 days, on flight day.
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">If "Delay" is selected:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Show fields for "How late arrived to final destination?" with options: &lt;3h, &gt;3h, connection flight lost.
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">If "Denied Boarding" is selected:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Show field for "Did you give up your seat voluntarily?" with options: Yes, No.
+If "No" is selected, a follow-up question appears: "Reason behind denial of boarding" with options: Flight overbooked, aggressive behavior with staff, intoxication, unspecified reason. 
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">The user should also add additional infos regarding the incident. 
+
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">If "Delay" or  "Cancellation" is selected:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">The form includes a question: "Did the airline mention disruption motive?" with options: Yes, No, I don’t know.
+If "Yes" is selected, a follow-up question appears: "What was the motive communicated by the airline?" with options: Technical problem, meteorological conditions, strike, problems with airport, crew problems, other motives.
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">If "Delay" or  "Cancellation" or "Denied Boarding" is selected:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">A large text box is provided for users to describe in short what has happened.
+The text box allows a sufficient character limit to capture detailed descriptions.
+
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">No Validation Required:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>The system does not enforce validation on the answers provided for disruption motive questions.
+
+A case without infortioan about disruption is not considered valid and may not be submitted.</t></r></si><si><t>Backend:
+- Process disruption type selection
+- Validate disruption presence before submission
+- Store disruption answers without strict answer validation
+
+Frontend:
+- Build disruption type dropdown
+- Show conditional fields by disruption type
+- Add incident description text box
+- Enforce disruption section completion
+
+Database:
+- Store disruption type
+- Store cancellation, delay, and denied boarding answers
+- Store airline motive details
+- Store incident description</t></si><si><t xml:space="preserve">Eligibility Determination </t></si><si><t>As a passenger, I want the system to determine the eligibility of my case based on my inputs and provide immediate feedback if my case is not eligible so that I know whether to proceed or reconsider my claim.</t></si><si><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Eligibility Criteria for Cancellation:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">The case is eligible if the passenger arrives &gt;3h late or never arrived AND
+The case is eligible if the cancellation notice was given &lt;14 days or on the flight day.
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Eligibility Criteria for Delay:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">The case is eligible if the passenger arrives &gt;3h late or never arrived.
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Eligibility Criteria for Denied Boarding:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>The case is eligible if the passenger arrives &gt;3h late or never arrived AND
+The case is eligible if the passenger did not give up their seat voluntarily.
+
+If eligible the "Status" field becomes "VALID".</t></r></si><si><t>Backend:
+- Implement eligibility rules for cancellation
+- Implement eligibility rules for delay
+- Implement eligibility rules for denied boarding
+- Set case status to VALID when eligible
+
+Frontend:
+- Show eligibility result feedback
+- Prevent progression for ineligible cases
+
+Database:
+- Store eligibility outcome
+- Store eligibility decision inputs
+- Update case status field</t></si><si><t>As a passenger, I want to receive a confirmation message when my case is determined to be eligible.</t></si><si><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Only eligible cases can be stored in the database.
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">
+Eligible Case Confirmation:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>If the case meets all eligibility criteria, a confirmation (as a simple text: "Case is eligible for submission") is displayed on the page. The "Submit" button becomes clickable.
+The system sends an email to user that  includes a unique case ID for reference.
+If the case does not meet all eligibility criteria, a confirmation  (as a simple text: "Case is NOT eligible for submission") is displayed on the page and the "submit" button remains disabled.</t></r></si><si><t>Backend:
+- Enforce only eligible cases can be stored
+- Generate unique case ID
+- Trigger confirmation email
+
+Frontend:
+- Show eligible confirmation message
+- Enable Submit button for eligible cases
+- Show ineligible confirmation message
+- Keep Submit button disabled for ineligible cases
+
+Database:
+- Store eligible case record
+- Persist generated case ID</t></si><si><t>(no role)</t></si><si><t>As a passenger, I want the system to create a case based on the entered details.</t></si><si><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><scheme val="minor"/></rPr><t xml:space="preserve">Case Creation:
+</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><scheme val="minor"/></rPr><t xml:space="preserve">When the "Submit" button is clicked, the system creates a case with a unique ID and date. A "Colleague" field is automatically added to the case. The field is inially EMPTY until one colleague is assigned.
+The case includes all entered disruption, flight and passenger details.
+
+</t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><scheme val="minor"/></rPr><t xml:space="preserve">Disruption Recording:
+</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><scheme val="minor"/></rPr><t>The flight disruption is recorded within the created case.
+The system ensures all disruption details are accurately captured.
+All the given details are saved in the database.
+
+Database Schema:
+Ensure the database schema includes tables for cases, flights, passengers, and disruptions.
+Each table should have appropriate columns to store all relevant details (e.g., case ID, flight date, passenger name).
+
+Case Data Storage:
+When a case is created, all entered details (flight details, passenger details, disruption details) are saved in the respective tables.
+Ensure that the case ID is unique and acts as a primary key in the cases table.
+
+Data Integrity:
+Validate that all required fields are filled and properly formatted before saving to the database.
+Implement foreign key constraints to link related data across tables (e.g., linking flights to cases).
+
+Error Handling:
+If saving to the database fails, an appropriate error message is displayed to the user.
+Ensure that no partial data is saved if the transaction fails.</t></r></si><si><t>Backend:
+- Create case with unique ID and date
+- Add empty colleague assignment field
+- Save passenger, flight, and disruption details transactionally
+- Handle database save failures without partial data
+
+Frontend:
+- Submit completed case data
+- Show save success or error message
+
+Database:
+- Create cases table fields
+- Create flights table fields
+- Create passengers table fields
+- Create disruptions table fields
+- Add primary and foreign key constraints</t></si><si><t xml:space="preserve">System </t></si><si><t>As a system, I want to create a user account for a new passenger.</t></si><si><t>After the system successfully captures and records all relevant information for the new passenger case, including passenger details, flight details, and disruption details, a new user account is created for the passenger.
+Upon storage of this information in the database, the system automatically generates a new password and sends it to the user's email.
+The user can then log in using their email address and the newly generated password. This password needs to be changed on the first login.</t></si><si><t>Backend:
+- Create passenger user account after case data capture
+- Generate initial password
+- Send password email
+- Enforce password change on first login
+
+Frontend:
+- Support login with generated credentials
+- Prompt password change on first login
+
+Database:
+- Store passenger user account
+- Store password reset/change-required flag
+- Link user account to passenger/case data</t></si><si><t>As a passenger, I want the system to generate a PDF contract that includes all case and flight details for my reference.</t></si><si><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Entry Form:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">The form submission button should trigger both the registration and the PDF generation process.
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">
+PDF Content:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">The PDF contract includes the case ID, date, passenger details and reservation number.
+The contract is clearly formatted and contains all necessary information.
+
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">PDF Generation:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">If the user submits the form, the system will generate a PDF file containing the details of the newly registered case.
+The PDF is stored and made available for download.
+
+Notification and Access:
+The confirmation message should include a link to download the generated PDF file.
+The PDF file should also be accessible from the entry page within the user interface.
+</t></r></si><si><t>https://www.reportlab.com/</t></si><si><t>Backend:
+- Generate PDF contract after form submission
+- Include case ID, date, passenger details, and reservation number
+- Store generated PDF
+- Provide PDF download endpoint
+
+Frontend:
+- Trigger PDF generation on submission
+- Show PDF download link in confirmation
+- Make PDF accessible from entry page
+
+Database:
+- Store PDF document metadata
+- Link PDF file to case record</t></si><si><t>Send Email to Passenger</t></si><si><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Email to Passenger:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>The system sends an email with the case ID and confirmation that the case was successfully registered. The PDF is attached in case the "Generate PDF".</t></r></si><si><t>Backend:
+- Send registration confirmation email
+- Include case ID in email
+- Attach generated PDF when available
+
+Frontend:
+- Show email notification confirmation if needed
+
+Database:
+- Store email notification status
+- Store sent timestamp and delivery metadata</t></si><si><t>Colleague</t></si><si><t>As a Colleague, I want to see a list of all the cases in the system.</t></si><si><t>Case View</t></si><si><t>The system provides access to all cases for colleagues.
+Past cases are displayed in a list which contains: ID, Case Date, Flight Number, Flight Date, Passenger Name, Status, Colleague assigned to the case (may be empty).</t></si><si><t>Backend:
+- Provide case list API for colleagues
+- Apply colleague authorization
+- Include assigned colleague and status data
+
+Frontend:
+- Build colleague case list view
+- Display case ID, dates, flight, passenger, status, and assignee
+- Add navigation to case details
+
+Database:
+- Query cases with passenger, flight, status, and colleague assignment joins</t></si><si><t>As a Colleague, I want to create cases so that I can manage work efficiently.</t></si><si><t>The system provides options for colleagues to create new cases and flights. 
+The colleague must enter the same information as a regular passenger. See epic 'Case Register'.
+A confirmation notification (toast/snackbar)  is shown upon successful creation.</t></si><si><t>Backend:
+- Reuse case creation flow for colleagues
+- Validate passenger, flight, and disruption data
+- Return creation confirmation
+
+Frontend:
+- Enable colleague case entry form
+- Show successful creation toast/snackbar
+
+Database:
+- Store colleague-created case records
+- Link created case to creator if needed</t></si><si><t>As a Colleague,  I want to see the details of a case.</t></si><si><t>Detailed Case View</t></si><si><t>Flight, Passenger and Uploaded Documents Details</t></si><si><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">The system provides access to details of cases for colleagues. 
+
+The Case ID in the "Case View" is a link. A new page is shown when the link is clicked and should display all the information relevant to a case.
+The following information is displayed:  
+
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Flight details:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Flight date, Flight Nr., Airline, Reservation Number (XXX), Departing Airport, Destination Airport, Connecting Flights, Planned Departure Time, Planned Arrival Time. 
+
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Passenger details: 
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Name, Family Name, Date of Birth, Contact details (e-mail, phone, address, postal code).
+
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Attached Documents: 
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">The documents attached to the case are displayed in an "Attached Documents List". The list contains: Filename, Upload Timestamp.
+
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Comments:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>All comments are shown in a "Comment List" that contains, the user (email address) who commented (Passenger or Colleague) together with a timestamp.</t></r></si><si><t>Backend:
+- Provide detailed case API for colleagues
+- Load flight, passenger, documents, and comments
+- Enforce colleague access rules
+
+Frontend:
+- Make case ID link open detailed case view
+- Display full flight, passenger, document, and comment sections
+
+Database:
+- Query related case detail tables
+- Support document and comment history retrieval</t></si><si><t>As a Colleague,  I want to be able to comment on a case.</t></si><si><t>The system allows colleagues in the "Detailed Case View" to add a comment to cases.
+
+A large text box is provided for users to comment together with a button labelled "Add Comment". Once the button is pressed the comment is saved and shown in the "Comment List" together with the user who commented (identified by e-mail address). 
+
+The text box allows a sufficient character limit to capture detailed descriptions. (1000 characters)
+
+Comments are time-stamped.</t></si><si><t>Backend:
+- Add colleague comment API
+- Validate comment length and author
+- Timestamp saved comments
+
+Frontend:
+- Add comment text area and button
+- Show comment list with author and timestamp
+
+Database:
+- Store case comments
+- Link comments to case and user</t></si><si><t>As a Colleague, I want to be able to attach and download documents to/from cases and ensure all necessary information is included.</t></si><si><t>The system allows colleagues to upload and download documents related to cases.
+A confirmation message (toast/snackbar) is shown upon successful document upload/download.  The file size must be a maximum of 5 MB and in PDF/JPEG format only.
+Any newly uploaded document is shown in the "Attached Documents Lists" with the corresponding timestamp.</t></si><si><t>Backend:
+- Implement colleague document upload and download
+- Validate file type and 5 MB limit
+- Return upload/download confirmations
+
+Frontend:
+- Add upload and download controls
+- Show document list and toast/snackbar confirmation
+
+Database:
+- Store document metadata
+- Link documents to cases or flights</t></si><si><t>As a Colleague, I want to assign cases to other colleagues to distribute workload efficiently.</t></si><si><t>The system allows colleagues to assign cases to other colleagues.
+A dropdown box that contains a list of all colleagues (including the currently logged user because a colleague can assign a case to themselves) is displayed together with a button "Assign" to the "Case View".
+Once a case and colleague are selected the "Colleague" field for corresponding case is updated.
+Assigned cases show the correct assignee and status update.
+Case "Status" field is set to ASSIGNED.
+Confirmation message (toast/snackbar) is shown to the user.</t></si><si><t>Backend:
+- Provide colleague list for assignment
+- Update case assignee
+- Validate assignment permissions
+
+Frontend:
+- Add colleague dropdown and Assign button
+- Refresh assignee field after assignment
+
+Database:
+- Store colleague assignment on case
+- Maintain user-to-case relationship</t></si><si><t>As a Colleague, I want to check the eligibility of a flight and claim so that I can determine if further documentation is needed or if the claim should be rejected.</t></si><si><t>The system allows colleagues to manually check the case eligibility and set the status of case to "ELIGIBLE" or "NON-ELIGIBLE".
+A checkbox is added to the 'Case View". Its initial value is taken from the Case.
+If not eligible, the system automatically sends a rejection response via email (with case ID and new Status) to the passenger and flags the case as INVALID ("Status" field).</t></si><si><t>Backend:
+- Support manual eligibility status update
+- Send rejection email for non-eligible cases
+- Flag rejected case status
+
+Frontend:
+- Add eligibility checkbox/control
+- Display current case eligibility state
+- Show update confirmation
+
+Database:
+- Store manual eligibility decision
+- Update case status and audit fields</t></si><si><t>As a Colleague, I want to see a list of all PDFs generated for the cases in the system, so that I can have a history of all changes.</t></si><si><t>History View</t></si><si><t>The system provides access to all generated PDFs for the existing cases in the system.
+Generated PDFs are displayed in a list which contains: ID, Document Name, Passenger Name and Case ID.</t></si><si><t>Backend:
+- Provide generated PDF history API
+- Enforce colleague access to PDF history
+
+Frontend:
+- Build PDF history view
+- Display ID, document name, passenger name, and case ID
+
+Database:
+- Query generated PDF metadata
+- Link PDFs to cases and passengers</t></si><si><t>System Admin</t></si><si><t>As a System Admin, I want to see a list of all users in the system.</t></si><si><t>User View</t></si><si><t>The system provides access to all users in the System.
+Fields: Name (Firstname + Lastname), E-Mail, Role, number of assigned cases, actions (delete, edit).</t></si><si><t>Backend:
+- Provide admin user list API
+- Include assigned case counts
+- Enforce admin authorization
+
+Frontend:
+- Build user list view
+- Display name, email, role, assigned cases, and actions
+
+Database:
+- Query users and assigned case counts</t></si><si><t>As a System Admin, I want to create user accounts for colleagues so that they can access the system and perform their tasks.</t></si><si><t>New User View</t></si><si><t>Name, Email</t></si><si><t>The system allows the creation of new user accounts for colleagues.
+Confirmation message is shown upon successful account creation.
+For each new colleague the admin must enter a first name, last name, a valid e-mail address and an intital password. This password is sent to the specified email address and needs to be changed on the first login.</t></si><si><t>Backend:
+- Implement colleague account creation
+- Validate new user data
+- Return creation confirmation
+
+Frontend:
+- Build new user form
+- Show successful creation confirmation
+
+Database:
+- Store colleague user account
+- Store assigned role and credentials metadata</t></si><si><t>As a System Admin, I want to delete user accounts (passengers, colleagues) to maintain the security and integrity of the system.</t></si><si><t>The system allows the deletion of user accounts for passengers and colleagues.
+All users are shown in a list that contains the name, e-mail address and a button for deletion (which might already exist from the User List task).
+Confirmation message is shown upon successful account deletion.</t></si><si><t>Backend:
+- Implement user deletion endpoint
+- Validate deletion permissions and constraints
+- Return deletion confirmation
+
+Frontend:
+- Add delete action to user list
+- Show deletion confirmation message
+
+Database:
+- Delete or deactivate user accounts
+- Preserve referential integrity for linked cases</t></si><si><t>As a System Admin, I want to delete cases to manage data effectively.</t></si><si><t>The system allows the deletion of cases.
+All cases are displayed in a list which contains ID (link), Case Date, Flight Number, Flight Date, Status, together with a button for deletion.
+Confirmation message is shown upon successful deletion.</t></si><si><t>Backend:
+- Implement case deletion endpoint
+- Validate admin permissions
+- Return deletion confirmation
+
+Frontend:
+- Add delete button to case list
+- Show successful deletion confirmation
+
+Database:
+- Delete or archive case records
+- Handle dependent flight, passenger, document, and comment data</t></si><si><t>As a System Admin I want to see a landing page that contains all the possible actions I can perform.</t></si><si><t>Admin View</t></si><si><t>The System shows a landing page that guides the Admin with links to the other relevant pages: New User View, User View, Case View, System View.</t></si><si><t>Backend:
+- Provide admin navigation metadata if needed
+- Enforce admin-only access
+
+Frontend:
+- Build admin landing page
+- Add links to New User, User, Case, and System views
+
+Database:
+- No new persistent data required</t></si><si><t>As a System Admin, I want to change system options (e-mail accounts, SMTP servers, e-mail presets, PDF presets) to ensure the system is configured correctly and meets the needs of the organisation.</t></si><si><t>System View</t></si><si><t>The story is optional; the settings details are left to the implementors preference. 
+
+The system allows changing system options such as email presets, and pdf presets.
+Email presets can include which e-mail system/api is used, formatting options, placeholder texts, etc. 
+PDF presets can include which fields are exported, layout, etc. 
+Changes are correctly applied and reflected in the system settings.</t></si><si><t>Backend:
+- Implement system options management
+- Support email preset and PDF preset configuration
+- Validate configuration changes
+
+Frontend:
+- Build system options view
+- Add editable email and PDF preset fields
+- Show save confirmation
+
+Database:
+- Store system option records
+- Persist email and PDF preset settings</t></si><si><t>As a registered Passenger, I want to see my past cases so that I can review their status and details.</t></si><si><t>The system provides access to past cases for registered passengers.
+Past cases are displayed in a list which contains: ID, Flight Number, Passenger Name, Status, Colleague assigned to the case (may be empty).</t></si><si><t>Backend:
+- Provide passenger case list API
+- Restrict results to logged-in passenger
+
+Frontend:
+- Build passenger past cases view
+- Display ID, flight number, passenger name, status, and assignee
+
+Database:
+- Query cases linked to passenger account</t></si><si><t>As a registered Passenger, I want to see the datails of a past case.</t></si><si><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">The system provides access to details of past cases for registered passengers. 
+
+The Case ID in the "Case View" is a link. A new page is shown when the link is clicked and should display all the information relevant to a case.
+The following information is displayed:
+
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Flight details:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Flight date, Flight Nr., Airline, Reservation Number (XXX), Departing Airport, Destination Airport, Connecting Flights, Planned Departure Time, Planned Arrival Time. 
+
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Passenger details: 
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Name, Family Name, Date of Birth, Contact details (e-mail, phone, address, postal code).
+
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Attached Documents: 
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">The any documents are attached to the case they are displayed in a "Attached Documents Lists". The list contains: Filename, Upload Timestamp.
+
+</t></r><r><rPr><b/><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Comments:
+</t></r><r><rPr><sz val="11"/><color theme="1"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>All comments are shown in a "Comment List" that contains, the user (email address) who commented (Passenger or Colleague) together with a timestamp.</t></r></si><si><t>Backend:
+- Provide passenger case details API
+- Restrict access to own cases
+- Load documents and comments
+
+Frontend:
+- Make case ID open detailed case view
+- Display flight, passenger, documents, and comments
+
+Database:
+- Query case details, documents, and comments for passenger case</t></si><si><t>As a Passenger, I want to attach documents to my cases so that I can provide necessary information.</t></si><si><t>The system allows registered passengers in the "Detailed Case View" to upload documents to their cases.
+An upload field is added to the view, with the option to either drag and drop, or browse in the file system. 
+The file size must be a maximum of 5 MB and in PDF/JPEG/JPG format only.
+A confirmation message (toast/snackbar) is shown upon successful upload of documents.
+Any newly uploaded document is shown in the "Attached Documents Lists" with the corresponding timestamp.</t></si><si><t>Backend:
+- Implement passenger document upload
+- Validate PDF/JPEG/JPG type and 5 MB limit
+- Return upload confirmation
+
+Frontend:
+- Add drag-and-drop and browse upload field
+- Show uploaded document in attached documents list
+- Display toast/snackbar confirmation
+
+Database:
+- Store uploaded document metadata
+- Link document to case and passenger</t></si><si><t>As a Passenger, I want to download documents from my cases so that I can keep a record of them.</t></si><si><t>The system allows passengers in the "Detailed Case View"  to download documents from their cases.
+Documents are downloaded in a user-friendly format.</t></si><si><t>Backend:
+- Implement passenger document download
+- Enforce document access permissions
+
+Frontend:
+- Add document download action
+- Provide user-friendly download behavior
+
+Database:
+- Retrieve document metadata and file reference</t></si><si><t xml:space="preserve">Comment on Case </t></si><si><t>As a Passenger, I want to comment on my cases as a means of communication to provide additional information or ask questions.</t></si><si><t>The system allows passengers in the "Detailed Case View"  to add a comment to their cases.
+
+A large text box is provided for users to comment, together with a button labelled "Add Comment". Once the button is pressed the comment is saved and shown in the "Comment List" together with the user who commented (identified by e-mail address). 
+
+The text box allows a sufficient character limit to capture detailed descriptions (1000 characters). 
+
+Comments are time-stamped.</t></si><si><t>Backend:
+- Add passenger comment API
+- Validate 1000-character limit
+- Timestamp saved comments
+
+Frontend:
+- Add comment text area and Add Comment button
+- Show comment list with author and timestamp
+
+Database:
+- Store passenger comments
+- Link comments to case and user</t></si><si><t>System (no role)</t></si><si><t>To reduce the number of REST Calls, a Timed-Job must be implemented that fills the Airports DB Table with Data from the REST API</t></si><si><t>The system runs a timed-kob that refills the Airports table with Data from an external REST endpoint.</t></si><si><t>Backend:
+- Implement scheduled airport data preload job
+- Call external airport REST endpoint
+- Handle refresh errors and retries
+
+Frontend:
+- No direct UI required unless monitoring is added
+
+Database:
+- Create or update airports table
+- Store airport reference data from API</t></si><si><t>Students</t></si><si><t>How to update</t></si><si><t>Catalina</t></si><si><t>Edit Student 1–5 names in column A. If you add more students, extend the dropdown source range on the Scrum Board Student column.</t></si><si><t>Calin</t></si><si><t>Darius</t></si><si><t>Filip</t></si><si><t>Gabriel</t></si><si><t>User Type</t></si><si><t>User Story</t></si><si><t>As a Passenger (registered), I want to create cases so that I can report issues or requests.</t></si><si><t>As a Passenger (non-registered), I want to create cases so that I can report issues without having to register.</t></si><si><t>Attorney</t></si><si><t>Attorneys are not allowed in the system.</t></si><si><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">As a Colleague, I want to create cases, claim cases, </t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">and flights so </t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>that I can manage work effectively.</t></r></si><si><t>As a Colleague, I want to comment on cases and claim cases as a means of communication to collaborate with others.</t></si><si><t>As a Colleague, I want to create user accounts for passengers to help them access the system.</t></si><si><t>As a Colleague, I want to attach documents to/from cases, claim cases, and flights to ensure all necessary information is included.</t></si><si><t>As a Colleague, I want to link cases to claim cases to maintain proper case management.</t></si><si><t>As a Colleague, I want to link flights to cases so that I can track relevant flight details.</t></si><si><t>As a Colleague, I want to assign claim cases to attorneys (if they were allowed) to ensure proper legal handling.</t></si><si><t>As a System Admin, I want to create users (passengers, colleagues, attorneys) so that they can access the system and perform their tasks. - Admin View</t></si><si><t>As a System Admin, I want to delete users (passengers, colleagues, attorneys) to maintain the security and integrity of the system.</t></si><si><t>As a System Admin, I want to delete cases, claim cases, and flights to manage data effectively.</t></si><si><t>As a System Admin, I want to modify/reset user accounts to assist users who are facing issues with their accounts.</t></si><si><t>As a System Admin, I want to change system options (email accounts/SMTP servers, email presets, pdf presets) to ensure the system is configured correctly and meets the needs of the organization.</t></si><si><r><rPr><b/><sz val="11"/><color rgb="FFFF0000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">UPDATE 12.08.2024
+</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">A case entry form is one of the most important piece of the application and has a few steps. We had every story for it written, however how these stories interconnect/the flow of them was missing. Now you can find below the flow of case entry and how each story connects:
+
+</t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">ACCESS OF FORM
+</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">- the case entry form can be accessed as registerered user from the case overview page or as a non-registered user from the home page
+- on the home page there are two buttons: "verify your flights eligibility" - this opens a new form and the button "view existing case" wich goes to the login page
+
+</t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">FLOW OF THE FORM AND CASE REGISTRY
+</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">The form has the following flow:
+</t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">
+1. FLIGHT DETAILS</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> - here we want to calculate the distance and determine the compensation value - see </t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>CASE_01</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> and </t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">CASE_02
+</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">- The distance is calculated based on the distance between the starting point and destination
+- We want also here to capture any other flights in the same reservation: after the passenger entered the starting point and destination, he can add also stopovers. Stopovers are also airports. 
+From this we can determine, how many flight there were in the yourney: passenger enters the journey CLJ-LHR - from this we will know the distance. 
+He/she also adds a stopover in MUC. From this we have the flight legs: CLJ-MUC and MUC-LHR. 
+The user must select, which flight was affected.  
+After selecting, which flight was with problems, the User must enter for each flight: flight nr. flight date, airline. 
+</t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">
+2. DISRUPTION DETAILS </t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">- at this part, we check for the formal eligibility of the case - </t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">see CASE_03, ELIGIBILITY_01, 
+</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">All the questions are from the aformentioned stories. This part determines if the case is eligible. 
+</t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">
+3. 
+a.</t></r><r><rPr><b/><sz val="11"/><color rgb="FFFF0000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> IF THE CASE IS NOT ELIGIBLE</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> - Show result to user: "Sorry, but your flight is not eligible for compensation. However you can check the eligility of another flight!" Button to verify another flight "check another flight" - this opens a new, empty form.  </t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">ELIGIBILITY_01
+</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">
+</t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">b. </t></r><r><rPr><b/><sz val="11"/><color rgb="FF00B050"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>IF THE CASE IS ELIGIBLE</t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> </t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">- Show result to user: "Congratulations! Your flight is possibly eligible for a compensation up to XXX€" - see </t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">ELIGIBILITY_02
+</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Here we ask for the email address (and GDPR checkbox) and show "Next" button. If the user filled out and clicked "next" we create the USER and save the case with status "INCOMPLETE". - </t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>CASE_04</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> and </t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">CASE_05
+</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">Now we also ask for all passenger details. If the passenger fills them out, we will save the passenger details to this case already created and send the PDF contract </t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>CASE_COMPLETED_01</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> and </t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">CASE_COMPLETED_02
+
+</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve">With this structure, the </t></r><r><rPr><b/><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t>progressbar</t></r><r><rPr><sz val="11"/><color rgb="FF000000"/><rFont val="Calibri"/><family val="2"/><scheme val="minor"/></rPr><t xml:space="preserve"> can also be displayed as: 
+1. Flight details -&gt; 2. Disruption details -&gt; 3. Passenger details (if case is eligible) 
+
+</t></r></si><si><t>Must be implemented (Core)</t></si><si><t>Nice to have</t></si><si><t>Optional</t></si><si><t>This epic focus on capturing the necessary details (flight details, personal details, type of disruption, reason of disruption).</t></si><si><t>This epic focuses on determing if a case is eligible.</t></si><si><t>This epic involves generating a PDF that contains all case information, and sending it to the customer.</t></si><si><t>This epic encompasses the various tasks and operations that can be performed by an employee within the system. It includes functionalities such as case management, data verification, customer communication.</t></si><si><t>This epic includes the various tasks and operations that can be performed by a system administrator within the system. It covers functionalities such as user management and system configuration.</t></si><si><t>This epic includes the various tasks and actions that can be performed by a passenger within the system. It covers functionalities such as submitting cases, documenting cases and communicating with customer support.</t></si></sst>
