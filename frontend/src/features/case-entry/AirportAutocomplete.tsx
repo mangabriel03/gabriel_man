@@ -19,9 +19,18 @@ export function AirportAutocomplete({ id, label, value, onChange, error }: Props
   const [loading, setLoading] = useState(false);
   const [fetchError, setFetchError] = useState<string | null>(null);
   const debounceRef = useRef<number | null>(null);
+  const blurTimeoutRef = useRef<number | null>(null);
   const controllerRef = useRef<AbortController | null>(null);
 
   useEffect(() => setQuery(value), [value]);
+
+  useEffect(() => {
+    return () => {
+      if (debounceRef.current) window.clearTimeout(debounceRef.current);
+      if (blurTimeoutRef.current) window.clearTimeout(blurTimeoutRef.current);
+      controllerRef.current?.abort();
+    };
+  }, []);
 
   useEffect(() => {
     if (debounceRef.current) window.clearTimeout(debounceRef.current);
@@ -60,7 +69,10 @@ export function AirportAutocomplete({ id, label, value, onChange, error }: Props
           setQuery(e.target.value.toUpperCase());
           setOpen(true);
         }}
-        onBlur={() => setTimeout(() => setOpen(false), 100)}
+        onBlur={() => {
+          if (blurTimeoutRef.current) window.clearTimeout(blurTimeoutRef.current);
+          blurTimeoutRef.current = window.setTimeout(() => setOpen(false), 100);
+        }}
         onFocus={() => setOpen(true)}
         aria-invalid={!!error}
         aria-describedby={error ? `${id}-err` : undefined}

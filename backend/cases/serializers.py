@@ -3,16 +3,65 @@ from __future__ import annotations
 import json
 from datetime import date
 
+from django.contrib.auth import get_user_model
 from django.db import transaction
 from django.utils import timezone
 from rest_framework import serializers
 
 from airports.models import Airport
 
+from .account_service import provision_colleague_account, provision_passenger_account
+from .disruption import (
+    AirlineMotive,
+    CancellationNotice,
+    DelayDuration,
+    DeniedBoardingReason,
+    DISRUPTION_TYPE_API_VALUES,
+    DisruptionType,
+    MotiveMentioned,
+)
 from .models import Case, CaseDocument, DocumentKind, FlightSegment
 
 
 PHONE_REGEX = r"^\+?[0-9\s\-()]{7,30}$"
+
+
+class AdminUserCreateSerializer(serializers.Serializer):
+    first_name = serializers.CharField(max_length=150, trim_whitespace=True)
+    last_name = serializers.CharField(max_length=150, trim_whitespace=True)
+    email = serializers.EmailField()
+    password = serializers.CharField(min_length=12, max_length=128, trim_whitespace=False)
+
+    def validate_first_name(self, value: str) -> str:
+        value = value.strip()
+        if not value:
+            raise serializers.ValidationError("First name is required.")
+        return value
+
+    def validate_last_name(self, value: str) -> str:
+        value = value.strip()
+        if not value:
+            raise serializers.ValidationError("Last name is required.")
+        return value
+
+    def validate_email(self, value: str) -> str:
+        normalized_email = value.strip().lower()
+        if not normalized_email:
+            raise serializers.ValidationError("Email is required.")
+
+        user_model = get_user_model()
+        existing_user = user_model.objects.filter(username__iexact=normalized_email).first()
+        if existing_user is not None and (existing_user.is_staff or existing_user.is_superuser):
+            raise serializers.ValidationError("A staff account already exists for this email address.")
+        return normalized_email
+
+    def create(self, validated_data: dict):
+        return provision_colleague_account(
+            first_name=validated_data["first_name"],
+            last_name=validated_data["last_name"],
+            email=validated_data["email"],
+            password=validated_data["password"],
+        )
 
 
 class PassengerSerializer(serializers.Serializer):
@@ -49,10 +98,136 @@ class FlightSegmentSerializer(serializers.Serializer):
         return attrs
 
 
+_VOLUNTARY_TO_BOOL = {"YES": True, "NO": False}
+
+
+class DisruptionSerializer(serializers.Serializer):
+    """Nested serializer for the `disruption` block on POST /api/cases/.
+
+    Conditional-required rules live here (not on the model). Fields that do
+    not belong to the chosen `disruption_type` MUST be absent or null; sending
+    a non-null value for an inapplicable field is a 400 error.
+    """
+
+    disruption_type = serializers.ChoiceField(choices=DISRUPTION_TYPE_API_VALUES)
+    cancellation_notice = serializers.ChoiceField(
+        choices=CancellationNotice.values, required=False, allow_null=True,
+    )
+    delay_duration = serializers.ChoiceField(
+        choices=DelayDuration.values, required=False, allow_null=True,
+    )
+    denied_boarding_voluntary = serializers.ChoiceField(
+        choices=["YES", "NO"], required=False, allow_null=True,
+    )
+    denied_boarding_reason = serializers.ChoiceField(
+        choices=DeniedBoardingReason.values, required=False, allow_null=True,
+    )
+    airline_motive_mentioned = serializers.ChoiceField(
+        choices=MotiveMentioned.values, required=False, allow_null=True,
+    )
+    airline_motive = serializers.ChoiceField(
+        choices=AirlineMotive.values, required=False, allow_null=True,
+    )
+    incident_description = serializers.CharField(
+        max_length=2000, allow_blank=False, trim_whitespace=True,
+    )
+
+    # Fields that are allowed to be non-null per disruption_type. All other
+    # optional fields must be null or absent for that type.
+    _ALLOWED: dict[str, set[str]] = {
+        DisruptionType.CANCELLATION.value: {
+            "cancellation_notice", "airline_motive_mentioned", "airline_motive",
+        },
+        DisruptionType.DELAY.value: {
+            "delay_duration", "airline_motive_mentioned", "airline_motive",
+        },
+        DisruptionType.DENIED_BOARDING.value: {
+            "denied_boarding_voluntary", "denied_boarding_reason",
+        },
+    }
+    # Subset of _ALLOWED[type] that must be non-null (unconditionally required
+    # for the branch). Airline motive rules are handled separately below.
+    _REQUIRED: dict[str, set[str]] = {
+        DisruptionType.CANCELLATION.value: {
+            "cancellation_notice", "airline_motive_mentioned",
+        },
+        DisruptionType.DELAY.value: {
+            "delay_duration", "airline_motive_mentioned",
+        },
+        DisruptionType.DENIED_BOARDING.value: {"denied_boarding_voluntary"},
+    }
+    _ALL_OPTIONAL = {
+        "cancellation_notice", "delay_duration",
+        "denied_boarding_voluntary", "denied_boarding_reason",
+        "airline_motive_mentioned", "airline_motive",
+    }
+
+    def validate(self, attrs: dict) -> dict:
+        d_type = attrs["disruption_type"]
+        allowed = self._ALLOWED[d_type]
+        errors: dict[str, list[str]] = {}
+
+        # 1. Reject inapplicable non-null fields.
+        for name in self._ALL_OPTIONAL - allowed:
+            if attrs.get(name) is not None:
+                errors[name] = [
+                    f"Not applicable for disruption_type '{d_type}'."
+                ]
+
+        # 2. Enforce unconditional required fields per branch.
+        for name in self._REQUIRED[d_type]:
+            if attrs.get(name) is None:
+                errors[name] = ["This field is required."]
+
+        # 3. Conditional airline motive rule (CANCELLATION / DELAY only).
+        if d_type in {DisruptionType.CANCELLATION.value, DisruptionType.DELAY.value}:
+            mentioned = attrs.get("airline_motive_mentioned")
+            motive = attrs.get("airline_motive")
+            if mentioned == MotiveMentioned.YES.value and motive is None:
+                errors["airline_motive"] = ["This field is required."]
+            if mentioned != MotiveMentioned.YES.value and motive is not None:
+                errors["airline_motive"] = [
+                    "Only allowed when airline_motive_mentioned == 'YES'."
+                ]
+
+        # 4. Conditional denied-boarding-reason rule.
+        if d_type == DisruptionType.DENIED_BOARDING.value:
+            voluntary = attrs.get("denied_boarding_voluntary")
+            reason = attrs.get("denied_boarding_reason")
+            if voluntary == "NO" and reason is None:
+                errors["denied_boarding_reason"] = ["This field is required."]
+            if voluntary == "YES" and reason is not None:
+                errors["denied_boarding_reason"] = [
+                    "Only allowed when denied_boarding_voluntary == 'NO'."
+                ]
+
+        if errors:
+            raise serializers.ValidationError(errors)
+
+        # Convert the voluntary string to bool for storage; other fields
+        # already match storage types. Strip inapplicable keys so `create()`
+        # can splat the dict onto the model without writing stray values.
+        cleaned: dict = {
+            "disruption_type": d_type,
+            "incident_description": attrs["incident_description"],
+        }
+        for name in allowed:
+            value = attrs.get(name)
+            if name == "denied_boarding_voluntary" and value is not None:
+                cleaned[name] = _VOLUNTARY_TO_BOOL[value]
+            else:
+                cleaned[name] = value
+        # Ensure every disruption column has an explicit key (None where absent).
+        for name in self._ALL_OPTIONAL:
+            cleaned.setdefault(name, None)
+        return cleaned
+
+
 class CaseCreateSerializer(serializers.Serializer):
     passenger = PassengerSerializer()
     reservation_number = serializers.CharField(max_length=30)
     segments = FlightSegmentSerializer(many=True)
+    disruption = DisruptionSerializer()
     gdpr_consent = serializers.BooleanField()
 
     def validate_gdpr_consent(self, value: bool) -> bool:
@@ -92,18 +267,33 @@ class CaseCreateSerializer(serializers.Serializer):
     def create(self, validated_data: dict) -> Case:
         passenger = validated_data["passenger"]
         segments = validated_data["segments"]
+        disruption = validated_data["disruption"]
+        passenger_user = provision_passenger_account(
+            first_name=passenger["first_name"],
+            last_name=passenger["last_name"],
+            email=passenger["email"],
+        )
 
         case = Case.objects.create(
             first_name=passenger["first_name"],
             last_name=passenger["last_name"],
             date_of_birth=passenger["date_of_birth"],
             email=passenger["email"],
+            user=passenger_user,
             phone=passenger["phone"],
             address=passenger["address"],
             postal_code=passenger["postal_code"],
             reservation_number=validated_data["reservation_number"],
             gdpr_consent=True,
             gdpr_consent_at=timezone.now(),
+            disruption_type=disruption["disruption_type"],
+            cancellation_notice=disruption["cancellation_notice"],
+            delay_duration=disruption["delay_duration"],
+            denied_boarding_voluntary=disruption["denied_boarding_voluntary"],
+            denied_boarding_reason=disruption["denied_boarding_reason"],
+            airline_motive_mentioned=disruption["airline_motive_mentioned"],
+            airline_motive=disruption["airline_motive"],
+            incident_description=disruption["incident_description"],
         )
 
         airports_by_iata = {

@@ -1,6 +1,7 @@
 import { render, screen, waitFor, act } from "@testing-library/react";
 import { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
+import { MemoryRouter } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import { CompensationSummary } from "../src/features/case-entry/CompensationSummary";
@@ -37,9 +38,11 @@ function Harness({ segments }: { segments: CaseFormValues["segments"] }) {
     methods.setValue("segments", segments);
   }, [segments, methods]);
   return (
-    <FormProvider {...methods}>
-      <CompensationSummary />
-    </FormProvider>
+    <MemoryRouter>
+      <FormProvider {...methods}>
+        <CompensationSummary />
+      </FormProvider>
+    </MemoryRouter>
   );
 }
 

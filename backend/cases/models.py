@@ -5,9 +5,22 @@ from pathlib import Path
 
 from django.core.exceptions import ValidationError
 from django.core.validators import RegexValidator
+from django.db.models.signals import post_delete
+from django.conf import settings
 from django.db import models
 from django.db.models import Q
+from django.dispatch import receiver
 from django.utils import timezone
+
+from .disruption.choices import (
+    AirlineMotive,
+    CancellationNotice,
+    DelayDuration,
+    DeniedBoardingReason,
+    DISRUPTION_TYPE_DB_VALUES,
+    DisruptionType,
+    MotiveMentioned,
+)
 
 
 PHONE_REGEX = r"^\+?[0-9\s\-()]{7,30}$"
@@ -36,6 +49,13 @@ class Case(models.Model):
     last_name = models.CharField(max_length=80)
     date_of_birth = models.DateField()
     email = models.EmailField()
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        related_name="cases",
+        on_delete=models.PROTECT,
+        null=True,
+        blank=True,
+    )
     phone = models.CharField(
         max_length=30, validators=[RegexValidator(regex=PHONE_REGEX)]
     )
@@ -56,6 +76,28 @@ class Case(models.Model):
     )
     compensation_calculated_at = models.DateTimeField(null=True, blank=True)
 
+    # --- CASE_03 disruption ---
+    disruption_type = models.CharField(
+        max_length=20, choices=DisruptionType.choices,
+    )
+    cancellation_notice = models.CharField(
+        max_length=20, choices=CancellationNotice.choices, null=True, blank=True,
+    )
+    delay_duration = models.CharField(
+        max_length=20, choices=DelayDuration.choices, null=True, blank=True,
+    )
+    denied_boarding_voluntary = models.BooleanField(null=True, blank=True)
+    denied_boarding_reason = models.CharField(
+        max_length=30, choices=DeniedBoardingReason.choices, null=True, blank=True,
+    )
+    airline_motive_mentioned = models.CharField(
+        max_length=10, choices=MotiveMentioned.choices, null=True, blank=True,
+    )
+    airline_motive = models.CharField(
+        max_length=20, choices=AirlineMotive.choices, null=True, blank=True,
+    )
+    incident_description = models.TextField(max_length=2000)
+
     class Meta:
         ordering = ["-created_at"]
         constraints = [
@@ -65,6 +107,10 @@ class Case(models.Model):
                     | Q(compensation_amount_eur__in=[250, 400, 600])
                 ),
                 name="compensation_amount_eur_valid",
+            ),
+            models.CheckConstraint(
+                check=Q(disruption_type__in=DISRUPTION_TYPE_DB_VALUES),
+                name="disruption_type_valid",
             ),
         ]
 
@@ -76,6 +122,42 @@ class Case(models.Model):
 
     def __str__(self) -> str:
         return f"Case {self.id} ({self.status})"
+
+
+class PassengerAccount(models.Model):
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
+        related_name="passenger_account",
+        on_delete=models.CASCADE,
+    )
+    must_change_password = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return f"PassengerAccount for {self.user_id}"
+
+
+class AccountRole(models.TextChoices):
+    SYSTEM_ADMIN = "SYSTEM_ADMIN", "System Admin"
+    COLLEAGUE = "COLLEAGUE", "Colleague"
+    PASSENGER = "PASSENGER", "Passenger"
+
+
+class UserAccountProfile(models.Model):
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
+        related_name="account_profile",
+        on_delete=models.CASCADE,
+    )
+    assigned_role = models.CharField(max_length=20, choices=AccountRole.choices)
+    must_change_password = models.BooleanField(default=False)
+    password_sent_at = models.DateTimeField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self) -> str:
+        return f"UserAccountProfile for {self.user_id} ({self.assigned_role})"
 
 
 class FlightSegment(models.Model):
@@ -145,3 +227,9 @@ class CaseDocument(models.Model):
 
     def __str__(self) -> str:
         return f"{self.kind} for {self.case_id}"
+
+
+@receiver(post_delete, sender=CaseDocument)
+def delete_case_document_file(sender, instance: CaseDocument, **kwargs) -> None:
+    if instance.file:
+        instance.file.delete(save=False)

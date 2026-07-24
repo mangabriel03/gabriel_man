@@ -46,5 +46,11 @@ def valid_payload():
                 "is_problem_flight": True,
             }
         ],
+        "disruption": {
+            "disruption_type": "DELAY",
+            "delay_duration": "MORE_THAN_3H",
+            "airline_motive_mentioned": "DONT_KNOW",
+            "incident_description": "Flight was delayed by five hours; missed connection.",
+        },
         "gdpr_consent": True,
     }

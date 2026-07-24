@@ -1,5 +1,12 @@
-import { CaseEntryForm } from "./features/case-entry/CaseEntryForm";
+import { BrowserRouter } from "react-router-dom";
+
+import { AppRoutes } from "./AppRoutes";
 
 export default function App() {
-  return <CaseEntryForm />;
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
 }
+

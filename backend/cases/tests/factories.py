@@ -38,6 +38,12 @@ class CaseFactory(factory.django.DjangoModelFactory):
     gdpr_consent = True
     gdpr_consent_at = factory.LazyFunction(timezone.now)
 
+    # --- CASE_03 disruption defaults (DELAY branch, no motive) ---
+    disruption_type = "DELAY"
+    delay_duration = "MORE_THAN_3H"
+    airline_motive_mentioned = "DONT_KNOW"
+    incident_description = "Flight was delayed by five hours."
+
 
 class FlightSegmentFactory(factory.django.DjangoModelFactory):
     class Meta:

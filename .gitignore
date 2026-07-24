@@ -26,6 +26,16 @@ frontend/.vite/
 frontend/coverage/
 frontend/.env
 frontend/.env.local
+# Compiled artifacts from `tsc -b` — sources are .ts/.tsx only
+frontend/src/**/*.js
+frontend/src/**/*.d.ts
+frontend/src/**/*.js.map
+frontend/tests/**/*.js
+frontend/tests/**/*.d.ts
+frontend/tests/**/*.js.map
+frontend/vite.config.js
+frontend/vite.config.d.ts
+frontend/*.tsbuildinfo
 
 # --- OS / IDE ---
 .DS_Store
