@@ -1,0 +1,24 @@
+
+[7m[1m[36m RUN [39m[22m[27m [36mv1.6.1[39m [90mC:/Users/mang/Desktop/FirstAiTraining/frontend[39m
+
+
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[1m[7m Unhandled Errors [27m[22mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+[31m[1m
+Vitest caught 1 unhandled error during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.[22m[39m
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ» Unhandled Error ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+Error: Worker terminated due to reaching memory limit: JS heap out of memory
+ Γ¥» [kOnExit] node:internal/worker:398:26
+ Γ¥» Worker.<computed>.onexit node:internal/worker:295:20
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+Serialized Error: { code: 'ERR_WORKER_OUT_OF_MEMORY' }
+[31mΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[39m
+
+[2m Test Files [22m [90m (1)[39m
+[2m      Tests [22m [90m (4)[39m
+[2m     Errors [22m [1m[31m1 error[39m[22m
+[2m   Start at [22m 11:35:19
+[2m   Duration [22m 975.36s[2m (transform 158ms, setup 88ms, collect 325ms, tests 0ms, environment 406ms, prepare 89ms)[22m
+
